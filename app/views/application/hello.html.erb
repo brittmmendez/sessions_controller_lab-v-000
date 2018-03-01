@@ -1,4 +1,4 @@
-<% if !params[:name] || params[:name].empty? %>
+<% if !session[:name] || session[:name].empty? %>
   <h1>Hi!</h1>
   <%= link_to "Sign in!", '/sessions/new' %>
 
