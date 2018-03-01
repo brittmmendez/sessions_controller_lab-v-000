@@ -15,12 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :name
-   redirect_to '/'
-    #if !session[:name] || session[:name].empty?
-  #    redirect_to '/'
-#    else
-#      session.delete :name
-#      redirect_to '/'
-#      end
-    end
+    redirect_to '/'
+   #could also write: redirect_to controller: 'application', action: 'hello'
+  end
 end
