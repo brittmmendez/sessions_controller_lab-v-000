@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :name if params[:name] || !params[:name].empty?
+    session.delete :name if session[:name] || !session[:name].empty?
     redirect_to '/'
 
   end
