@@ -14,12 +14,13 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    if !session[:name] || session[:name].empty?
-      redirect_to '/'
-    else
-      #if session[:name] || !session[:name].empty?
+    #if !session[:name] || session[:name].empty?
+  #    redirect_to '/'
+  #  else
+      if session[:name] || !session[:name].empty?
         session.delete :name
-        redirect_to '/'
       end
+        redirect_to '/'
+  #    end
     end
 end
