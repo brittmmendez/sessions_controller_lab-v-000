@@ -17,7 +17,8 @@ class SessionsController < ApplicationController
     if !session[:name] || session[:name].empty?
       redirect_to '/'
     elsif session[:name] || !session[:name].empty?
-        session.delete
+        session.delete :name
         redirect_to '/'
       end
+    end
 end
