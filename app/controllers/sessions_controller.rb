@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if session[:name] ==nil
+    if params[:name] == nil
       render :new
     else
       session[:name]=params[:name]
